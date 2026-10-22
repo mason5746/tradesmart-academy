@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TradeSmart Academy</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #080d0b;
+      color: #f4fff7;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #20362a;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      color: #43ff91;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .hero {
+      padding: 90px 8%;
+      text-align: center;
+    }
+
+    .tag {
+      color: #43ff91;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 72px);
+      line-height: 1.05;
+      margin: 20px 0;
+    }
+
+    h1 span {
+      color: #43ff91;
+    }
+
+    p {
+      color: #a9b9af;
+      margin: 0 0 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #43ff91;
+      color: #06120a;
+      padding: 14px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 10px 5px;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: #43ff91;
+      border: 1px solid #43ff91;
+    }
+
+    section {
+      padding: 55px 8%;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #101a14;
+      border: 1px solid #263c2e;
+      border-radius: 14px;
+      padding: 22px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .number {
+      font-size: 28px;
+      color: #43ff91;
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      color: #dcefe3;
+    }
+
+    input {
+      width: 100%;
+      padding: 13px;
+      margin: 8px 0 18px;
+      background: #080d0b;
+      border: 1px solid #345340;
+      color: white;
+      border-radius: 7px;
+      font-size: 16px;
+    }
+
+    .result {
+      margin-top: 20px;
+      background: rgba(67, 255, 145, 0.06);
+      border: 1px solid rgba(67, 255, 145, 0.2);
+      border-radius: 10px;
+      padding: 14px 16px;
+      color: #f4fff7;
+    }
+
+    .error {
+      border-color: rgba(255, 107, 107, 0.4);
+      background: rgba(255, 107, 107, 0.08);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #20362a;
+      color: #84978b;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">TradeSmart.</div>
+    <nav>
+      <a href="#course">Course</a>
+      <a href="#calculator">Calculator</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="tag">YOUR TRADING JOURNEY STARTS HERE</div>
+    <h1>LEARN THE MARKET.<br><span>BUILD YOUR SKILLS.</span></h1>
+    <p>
+      Understand stocks, learn risk management, and practise trading with simulated money
+      before risking real money.
+    </p>
+    <a class="btn" href="#course">Explore the Course →</a>
+    <a class="btn secondary" href="#calculator">Try the Calculator</a>
+  </div>
+
+  <section id="course">
+    <div class="tag">THE CURRICULUM</div>
+    <h2>Learn it step by step.</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="number">01</div>
+        <h3>Stock Market Basics</h3>
+        <p>Learn what stocks, exchanges, indexes and brokers are.</p>
+      </div>
+      <div class="card">
+        <div class="number">02</div>
+        <h3>Reading Charts</h3>
+        <p>Understand candlesticks, trends, volume and timeframes.</p>
+      </div>
+      <div class="card">
+        <div class="number">03</div>
+        <h3>Trading Strategies</h3>
+        <p>Study common setups and learn why no strategy wins every time.</p>
+      </div>
+      <div class="card">
+        <div class="number">04</div>
+        <h3>Risk Management</h3>
+        <p>Learn position sizing, diversification and potential losses.</p>
+      </div>
+      <div class="card">
+        <div class="number">05</div>
+        <h3>Trading Psychology</h3>
+        <p>Recognize FOMO, emotional decisions and overconfidence.</p>
+      </div>
+      <div class="card">
+        <div class="number">06</div>
+        <h3>Paper Trading</h3>
+        <p>Practise with simulated money and review your decisions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="calculator">
+    <div class="tag">FREE LEARNING TOOL</div>
+    <h2>Position Size Calculator</h2>
+    <p>Explore how different risk assumptions affect a hypothetical trade.</p>
+
+    <div class="card">
+      <label for="balance">Simulated account balance ($)</label>
+      <input id="balance" type="number" value="1000" min="0" step="0.01" />
+
+      <label for="risk">Hypothetical risk per trade (%)</label>
+      <input id="risk" type="number" value="1" min="0" max="100" step="0.1" />
+
+      <label for="entry">Entry price ($)</label>
+      <input id="entry" type="number" value="50" min="0.01" step="0.01" />
+
+      <label for="stop">Stop price ($)</label>
+      <input id="stop" type="number" value="48" min="0" step="0.01" />
+
+      <button class="btn" type="button" onclick="calculate()">Calculate</button>
+
+      <div id="result" class="result" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <footer>
+    TradeSmart Academy · Learn first. Practise safely.<br />
+    Educational purposes only. Not financial advice.
+  </footer>
+
+  <script>
+    function calculate() {
+      const balance = Number(document.getElementById("balance").value);
+      const risk = Number(document.getElementById("risk").value);
+      const entry = Number(document.getElementById("entry").value);
+      const stop = Number(document.getElementById("stop").value);
+      const result = document.getElementById("result");
+
+      const isValid =
+        Number.isFinite(balance) &&
+        Number.isFinite(risk) &&
+        Number.isFinite(entry) &&
+        Number.isFinite(stop) &&
+        balance > 0 &&
+        risk > 0 &&
+        risk <= 100 &&
+        entry > 0 &&
+        stop >= 0 &&
+        stop < entry;
+
+      if (!isValid) {
+        result.classList.add("error");
+        result.innerHTML = "<p>Please enter valid numbers. The stop price must be below the entry price.</p>";
+        return;
+      }
+
+      result.classList.remove("error");
+
+      const riskAmount = (balance * risk) / 100;
+      const lossPerShare = entry - stop;
+      const shares = Math.floor(riskAmount / lossPerShare);
+      const positionValue = shares * entry;
+
+      result.innerHTML = `
+        <p>Hypothetical maximum planned loss:
+        <span class="number">$${riskAmount.toFixed(2)}</span></p>
+        <p>Shares by risk calculation: <strong>${shares}</strong></p>
+        <p>Estimated position value: <strong>$${positionValue.toFixed(2)}</strong></p>
+        <p>This is an educational estimate. Real trades can lose more than planned.</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>
